@@ -1,0 +1,43 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-index">
+        <div class="container-index">
+            <img class="indx-img" src="{% static 'pages/img/1.jpg' %}"/>
+            <div class="descrip-img-1">
+                <div class="h1__index">
+                    <h1>WELCOME TO MY WORLD</h1>
+                </div>
+                <div class="h2__index">
+                    <p>I'm the quiet girl next door who is always lookin' to have some fun!</p>
+                </div>
+            </div>
+            <div class="donate">
+                <form action="https://valentina-conte.diaka.ua/donate" target="_blank">
+                    <button class='dnt-btn-txt' href="#">&#x1F48E Donate</button>
+                </form>
+                <div class="text-btn">
+                    <p>Tip Me-For Better Energy &#129293;</p>
+                </div>    
+            </div>
+        </div>
+        <div class="container-index">
+            <img class="indx-img" src="{% static 'pages/img/2.jpg' %}"/>
+            <div class="centered">
+                <a href="https://onlyfans.com/valentinaconte" target="_blank">
+                    <img class='of-logo' src="{% static 'pages/img/of-logo.png' %}">
+                </a>
+            </div>
+        </div>
+        <div class="container-index">
+            <img class="indx-img" src="{% static 'pages/img/3.jpg' %}"/>
+            <div class="centered">
+                <a class="of-link" target="_blank" href="https://onlyfans.com/valentinaconte">
+                    <img class='of-logo' src="{% static 'pages/img/of-logo.png' %}">
+                    <!-- <p class="exclusive">Exclusive</p> -->
+                </a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

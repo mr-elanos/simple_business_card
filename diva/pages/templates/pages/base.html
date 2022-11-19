@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Montserrat:wght@100;400&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link type="image/x-icon" href="{% static 'pages/img/favicon.ico' %}" rel="shortcut icon">
+    <link type="Image/x-icon" href="{% static 'pages/img/favicon.ico' %}" rel="icon">
+</head>
+<body>
+    <nav class="nav">
+        <a class="logo__menu" href="{% url 'home' %}">Diva Valentina</a>
+        <ul class="ul__menu">
+            <li><a href="{% url 'home' %}" class="nav-link__menu">Home</a></li>
+            <li><a href="{% url 'about' %}" class="nav-link__menu">About</a></li>
+        </ul>
+    </nav>
+
+{% block content %}
+{% endblock %}
+
+    <footer>
+        <section class="section-footer">
+            <video class='footer_vd' autoplay loop muted width="100%">
+                <source src="{% static 'pages/img/footer.mp4' %}" type="video/mp4">
+            </video>
+            <div class="left-footer">
+                <p>© 2022 by DIVA VALENTINA</p>
+            </div>
+            <div class="nav-footer">
+                <ul class="ul__menu" >
+                    <li><a class="link__footer" target="_blank" href="https://www.youtube.com/channel/UCj60SAcO7PZXMqfjIRBXaMQ">YouTube</a></li>
+                    <li><a class="link__footer" target="_blank" href="http://www.tiktok.com/@divavalentina.sk">TikTok</a></li>
+                    <li><a class="link__footer" target="_blank" href="https://instagram.com/diva.valentina_?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="center-footer">
+                <p>Thank you so much for following me! I’m so grateful for your support. The love I get from you is genuinely outpouring. Thank you so much for your love and support.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

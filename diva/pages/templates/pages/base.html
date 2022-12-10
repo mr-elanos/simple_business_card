@@ -4,12 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
@@ -21,36 +15,42 @@
     <link type="Image/x-icon" href="{% static 'pages/img/favicon.ico' %}" rel="icon">
 </head>
 <body>
-    <nav class="nav">
-        <a class="logo__menu" href="{% url 'home' %}">Diva Valentina</a>
-        <ul class="ul__menu">
-            <li><a href="{% url 'home' %}" class="nav-link__menu">Home</a></li>
-            <li><a href="{% url 'about' %}" class="nav-link__menu">About</a></li>
-        </ul>
-    </nav>
-
-{% block content %}
-{% endblock %}
-
-    <footer>
-        <section class="section-footer">
-            <video class='footer_vd' autoplay loop muted width="100%">
-                <source src="{% static 'pages/img/footer.mp4' %}" type="video/mp4">
-            </video>
-            <div class="left-footer">
-                <p>© 2022 by DIVA VALENTINA</p>
-            </div>
-            <div class="nav-footer">
-                <ul class="ul__menu" >
-                    <li><a class="link__footer" target="_blank" href="https://www.youtube.com/channel/UCj60SAcO7PZXMqfjIRBXaMQ">YouTube</a></li>
-                    <li><a class="link__footer" target="_blank" href="http://www.tiktok.com/@divavalentina.sk">TikTok</a></li>
-                    <li><a class="link__footer" target="_blank" href="https://instagram.com/diva.valentina_?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__title"><a href="{% url 'home' %}">Diva Valentina</a></div>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="header__li"><a href="{% url 'about' %}">About</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+        {% block content %}
+        {% endblock %}
+
+    <footer class="footer">
+        <div class="footer__section">
+            <div class="footer__video">
+                <video autoplay loop muted>
+                    <source src="{% static 'pages/img/footer.mp4' %}" type="video/mp4">
+                </video>
             </div>
-            <div class="center-footer">
-                <p>Thank you so much for following me! I’m so grateful for your support. The love I get from you is genuinely outpouring. Thank you so much for your love and support.</p>
+            <div class="footer__content">
+                <div class="footer__sctn1">
+                    <p>© 2022 by DIVA VALENTINA</p>
+                    <div class="footer__ul">
+                        <li class="footer__li"><a href="https://www.youtube.com/channel/UCj60SAcO7PZXMqfjIRBXaMQ" target="_blank">YouTube</a></li>
+                        <li class="footer__li"><a href="http://www.tiktok.com/@divavalentina.sk" target="_blank">TikTok</a></li>
+                        <li class="footer__li"><a href="https://instagram.com/diva.valentina_?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a></li>
+                    </div>
+                </div>
+                <div class="footer__sctn2">
+                    Thank you so much for following me! I'm so grateful for your support. The love I get from you is genuinely outpouring. Thank you so much for your love and support.
+                </div>
             </div>
-        </section>
+        </div>
     </footer>
-</body>
+    </body>
 </html>

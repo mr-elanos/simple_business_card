@@ -2,51 +2,44 @@
 {% load static %}
 
 {% block content %}
-
-<main class="main-about">
-        <Header class="about-header">
-            <p class="p1__about">The Full Story</p>
-            <p class="p2__about">About me</p>
-            <p class="p3__about">I post videos every week ! In great sunny days, mostly :)</p>
-        </Header>
-        <div class="content-about">
-            <div class="about-block">
-                <div class="about-video">
-                    <video autoplay loop muted width="100%">
-                        <source src="{% static 'pages/img/1about.mp4' %}" type="video/mp4">
-                    </video>
-                </div>
-                <div class="about-descr">
-                    <a class='social-about' href="https://www.youtube.com/channel/UCj60SAcO7PZXMqfjIRBXaMQ" target="_blank">YOUTUBE</a>
-                    <p class="p4__about">Yes Yes Yes - All Just For You</p>
-                </div>
+    <main>
+        <div class="about">
+            <p>The Full Story</p>
+            <p>About me</p>
+            <p>I post videos every week ! In great sunny days, mostly :)</p>
+        </div>
+        <div class="social youtube-block">
+            <div class="social__video">
+                <video loop muted autoplay>
+                    <source src="{% static 'pages/img/1about.mp4' %}" type="video/mp4">
+                </video>
             </div>
-
-            <div class="about-block">
-                <div class="about-descr">
-                    <a class='social-about' href="https://instagram.com/diva.valentina_?igshid=YmMyMTA2M2Y=" target="_blank">INSTAGRAM</a>
-                    <p class="p4__about">My standards are hightâ€¦ just like my heels. I am a woman with ambition and heart of gold ðŸ’›</p>
-                </div>   
-                <div class="about-video">
-                    <video autoplay loop muted width="100%">
-                        <source src="{% static 'pages/img/2about.mp4' %}" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
-            <div class="about-block">
-                <div class="about-video">
-                    <video autoplay loop muted width="100%">
-                        <source src="{% static 'pages/img/3about.mp4' %}" type="video/mp4">
-                    </video>
-                </div>
-                <div class="about-descr">
-                    <a class='social-about' href="http://www.tiktok.com/@divavalentina.sk" target="_blank">TIKTOK</a>
-                    <p class="p4__about">My life is like a joke, so Iâ€™m naturally funny. Nobody is perfect,I am nobody</p>
-                </div>
+            <div class="social__info">
+                <div class="social__link"><a href="https://www.youtube.com/channel/UCj60SAcO7PZXMqfjIRBXaMQ" target="_blank">YOUTUBE</a></div>
+                <div class="social__text">Yes Yes Yes - All Just For You</div>
             </div>
         </div>
-
+        <div class="social instagram-block">
+            <div class="social__video">
+                <video loop muted autoplay>
+                    <source src="{% static 'pages/img/2about.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+            <div class="social__info">
+                <div class="social__link"><a href="https://www.instagram.com/diva.valentina_/?igshid=YmMyMTA2M2Y%3D" target="_blank">INSTAGRAM</a></div>
+                <div class="social__text">My standards are hight… just like my heels. I am a woman with ambition and heart of gold 💛</div>
+            </div>
+        </div>
+        <div class="social tiktok-block">
+            <div class="social__video">
+                <video loop muted autoplay>
+                    <source src="{% static 'pages/img/1about.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+            <div class="social__info">
+                <div class="social__link"><a href="https://www.tiktok.com/@divavalentina.sk" target="_blank">TIKTOK</a></div>
+                <div class="social__text">My life is like a joke, so I'm naturally funny. Nobody is perfect,I am nobody</div>
+            </div>
+        </div>
     </main>
-    
 {% endblock %}
